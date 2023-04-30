@@ -1,18 +1,3 @@
-/*
-Theme Name: Jason Stroff
-
-  1. >>> Headr Style
-  2. >>> Banner Style
-  3. >>> About Style
-  4. >>> Skills Style
-  5. >>> Experience Style
-  6. >>> Work Style
-  7. >>> Footer Style
-
-*/
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------*/
 html {
 	font-family: 'Inter', sans-serif;
 	background-color: #FFF
@@ -276,7 +261,7 @@ About Style
 	font-size: 24px;
 	line-height: 40px;
 	font-weight: 300;
-	margin-bottom: 60px;
+	margin-bottom: 20px;
 }
 
 .ci-button {
