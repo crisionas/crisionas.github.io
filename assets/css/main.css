@@ -198,6 +198,7 @@ Profile Image Style
 	border-radius: 50%;
 	padding: 0;
 	margin: 0;
+	width: 500px;
 	border: 15px solid transparent;
 	z-index: 0;
 	transition: all .3s ease-out;
@@ -227,7 +228,7 @@ Banner Style
 	color: #000;
 }
 
-.ci-numbervalulist {
+.ci-social-header {
 	list-style: none;
 	display: flex;
 	align-items: center;
@@ -237,29 +238,18 @@ Banner Style
 	margin-top: 60px;
 }
 
-.ci-numbervalulist li {
-	margin-right: 60px;
+.ci-social-header li {
+	margin-right: 30px;
 }
 
-.ci-numbervalulist li:last-child {
+.ci-social-header li:last-child {
 	margin-right: 0;
 }
 
-.ci-numbervalulist strong {
-	display: block;
-	color: #007bff;
-	font-size: 36px;
-	font-weight: 800;
-}
+.icon-container {
+	font-size: 40px;
+  }
 
-.ci-numbervalulist span {
-	font-size: 16px;
-	letter-spacing: 1px;
-}
-
-.ci-numbervalulist typing {
-	display: inline;
-}
 
 /*-----------------------------------------------------------------
 About Style
@@ -384,19 +374,19 @@ Footer Style
 		line-height: 40px;
 	}
 
-	.ci-numbervalulist {
+	.ci-social-header {
 		margin-top: 20px;
 	}
 
-	.ci-numbervalulist li {
+	.ci-social-header li {
 		margin-right: 30px;
 	}
 
-	.ci-numbervalulist strong {
+	.ci-social-header strong {
 		font-size: 30px;
 	}
 
-	.ci-numbervalulist span {
+	.ci-social-header span {
 		font-size: 14px;
 	}
 
