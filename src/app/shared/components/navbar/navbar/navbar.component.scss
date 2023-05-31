@@ -1,0 +1,95 @@
+.ci-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: #FFF;
+  padding: 70px 0;
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+.ci-header.ci-fixed-header {
+  padding: 20px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.ci-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ci-social {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ci-social li {
+  margin-left: 12px;
+}
+
+.ci-social li:first-child {
+  margin-left: 0;
+}
+
+.ci-social li a {
+  border-radius: 100%;
+  color: #FFF;
+  width: 24px;
+  height: 24px;
+  background-color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+}
+
+.ci-social li a:hover {
+  background-color: #000;
+  color: #FFF;
+}
+.ci-social-header {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.ci-social-header li {
+  margin-right: 30px;
+}
+
+.ci-social-header li:last-child {
+  margin-right: 0;
+}
+
+.ci-social-header {
+  margin-top: 20px;
+}
+
+.ci-social-header li {
+  margin-right: 30px;
+}
+
+.ci-social-header strong {
+  font-size: 30px;
+}
+
+.ci-social-header span {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .ci-header, .ci-header.ci-fixed-header {
+    padding: 15px 0;
+  }
+}
