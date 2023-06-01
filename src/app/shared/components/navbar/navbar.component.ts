@@ -3,11 +3,11 @@ import {faFacebookF, faLinkedinIn, faInstagram, faGithub} from '@fortawesome/fre
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-aboutme',
-  templateUrl: './aboutme.component.html',
-  styleUrls: ['./aboutme.component.scss']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss']
 })
-export class AboutmeComponent {
+export class NavbarComponent {
   faInstagram = faInstagram;
   faLinkedin = faLinkedinIn;
   faFacebook = faFacebookF;
