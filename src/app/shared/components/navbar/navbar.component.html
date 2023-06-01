@@ -4,28 +4,41 @@
       <a href="/" class="ci-logo">
         <span>C</span>Cristian Ionas
       </a>
-      <ul class="ci-social">
-        <li><a href="https://www.linkedin.com/in/cristianionas/"
-               target="_blank" title="LinkedIn">
-          <fa-icon [icon]="faLinkedin"></fa-icon>
-        </a></li>
-        <li><a href="https://www.facebook.com/cris.ionas"
-               target="_blank" title="Facebook">
-          <fa-icon class="icon-container" [icon]="faFacebook"></fa-icon>
-        </a></li>
-        <li><a href="https://www.instagram.com/cris.ionas/"
-               target="_blank" title="Instagram">
-          <fa-icon class="icon-container" [icon]="faInstagram"></fa-icon>
-        </a></li>
-        <li><a href="https://www.github.com/crisionas"
-               target="_blank" title="Github">
-          <fa-icon [icon]="faGithub"></fa-icon>
-        </a></li>
-        <li><a href="mailto:cris.ionas@gmail.com"
-               target="_blank" title="Mail">
-          <fa-icon [icon]="faEnvelope"></fa-icon>
-        </a></li>
-      </ul>
+      <nav id="navbar" class="navigation" role="navigation" (click)="onClick($event)">
+        <input id="toggle1" type="checkbox" [(ngModel)]="isMenuOpen" />
+        <label class="hamburger1" for="toggle1" (click)="toggleMenu()">
+          <div class="top"></div>
+          <div class="meat"></div>
+          <div class="bottom"></div>
+        </label>
+
+        <nav class="menu1" [class.open]="isMenuOpen">
+          <a routerLink="/">Home</a>
+          <a routerLink="/portofolio">Portofolio</a>
+          <ul class="ci-social">
+            <li><a href="https://www.linkedin.com/in/cristianionas/"
+                   target="_blank" title="LinkedIn">
+              <fa-icon [icon]="faLinkedin"></fa-icon>
+            </a></li>
+            <li><a href="https://www.facebook.com/cris.ionas"
+                   target="_blank" title="Facebook">
+              <fa-icon class="icon-container" [icon]="faFacebook"></fa-icon>
+            </a></li>
+            <li><a href="https://www.instagram.com/cris.ionas/"
+                   target="_blank" title="Instagram">
+              <fa-icon class="icon-container" [icon]="faInstagram"></fa-icon>
+            </a></li>
+            <li><a href="https://www.github.com/crisionas"
+                   target="_blank" title="Github">
+              <fa-icon [icon]="faGithub"></fa-icon>
+            </a></li>
+            <li><a href="mailto:cris.ionas@gmail.com"
+                   target="_blank" title="Mail">
+              <fa-icon [icon]="faEnvelope"></fa-icon>
+            </a></li>
+          </ul>
+        </nav>
+      </nav>
     </div>
   </div>
 </header>
