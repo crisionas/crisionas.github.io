@@ -44,7 +44,7 @@
   font-size: 22px;
   font-weight: 600;
   text-align: center;
-  margin-right: 12px;
+  margin-left: 12px;
 }
 
 .ci-logo:hover {
@@ -56,14 +56,15 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-left: auto;
 }
 
 .ci-social li {
-  margin-left: 12px;
+  margin-right: 12px;
 }
 
-.ci-social li:first-child {
-  margin-left: 0;
+.ci-social li:last-child {
+  margin-right: 0;
 }
 
 .ci-social li a {
@@ -114,64 +115,49 @@
   }
 }
 
-.hamburger1 {
-  height: 45px;
-  margin: 10px;
-  display: -ms-grid;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  justify-items: center;
-  z-index: 120;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #000;
+  padding: 10px;
 }
 
-.hamburger1 div {
-  background-color: black;
-  position: relative;
-  width: 40px;
-  height: 5px;
-  margin-top: 7px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+.navbar-toggle {
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+  height: 34px;
+  overflow: hidden;
 }
 
-#toggle1 {
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.nav-item {
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+.navbar-collapse {
   display: none;
 }
 
-#toggle1:checked + .hamburger1 .top {
-  transform: rotate(-45deg);
-  margin-top: 22.5px;
-}
-
-#toggle1:checked + .hamburger1 .meat {
-  transform: rotate(45deg);
-  margin-top: -5px;
-}
-
-#toggle1:checked + .hamburger1 .bottom {
-  transform: scale(0);
-}
-
-#toggle1:checked ~ .menu1 {
-  height: auto;
-  padding: 20px 0;
-  overflow: auto;
-}
-
-.menu1 {
-  margin: 0;
-  display: -ms-grid;
-  display: grid;
-  grid-template-rows: 1fr repeat(4, 0.5fr);
-  grid-row-gap: 10px;
-  padding: 0;
-  list-style: none;
-  clear: both;
-  width: auto;
-  text-align: center;
-  height: 0;
-  overflow: hidden;
-  z-index: 120;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+.navbar-collapse.show {
+  display: block;
 }

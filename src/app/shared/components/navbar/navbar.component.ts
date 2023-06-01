@@ -1,43 +1,47 @@
-import {Component, HostListener} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {faFacebookF, faLinkedinIn, faInstagram, faGithub} from '@fortawesome/free-brands-svg-icons';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
+
   faInstagram = faInstagram;
   faLinkedin = faLinkedinIn;
   faFacebook = faFacebookF;
   faGithub = faGithub;
   faEnvelope = faEnvelope;
-  isMenuOpen = false;
+
+  constructor(private router: Router) {
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.closeNavbar();
+      }
+    });
+  }
 
   @HostListener('window:scroll')
   onScroll(): void {
-    if (this.isMenuOpen) {
-      this.closeMenu();
+    if (this.isNavbarOpen) {
+      this.closeNavbar();
     }
   }
 
-  toggleMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen;
+  isNavbarOpen: boolean = false;
+
+  toggleNavbar() {
+    this.isNavbarOpen = !this.isNavbarOpen;
   }
 
-  onClick(event: Event): void {
-    const clickedElement = event.target as HTMLElement;
-    const menuElement = document.querySelector('.menu1');
-
-    if (this.isMenuOpen && !menuElement!.contains(clickedElement)) {
-      this.closeMenu();
-    } else {
-      this.isMenuOpen = true;
-    }
+  closeNavbar() {
+    this.isNavbarOpen = false;
   }
 
-  closeMenu(): void {
-    this.isMenuOpen = false;
-  }
 }
