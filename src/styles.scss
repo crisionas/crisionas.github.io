@@ -95,3 +95,54 @@ svg, img {
   padding-bottom: 7px;
   margin-bottom: 23px;
 }
+
+.ci-content-section {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+
+
+.ci-content-section p {
+  color: #373737;
+  font-size: 21px;
+  line-height: 40px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .ci-content-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .ci-content-section {
+    padding-bottom: 60px;
+  }
+
+  .ci-content-section p {
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.ci-button {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #007bff;
+  padding: 17px 30px;
+  border: 2px solid #007bff;
+  border-radius: 60px;
+}
+
+.ci-button:hover {
+  background-color: #007bff;
+  color: #FFF;
+}

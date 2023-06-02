@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {CarouselImage} from "../../shared/components/carousel/carousel.component";
+import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/carousel.component";
 
 @Component({
   selector: 'app-test',
@@ -7,25 +7,36 @@ import {CarouselImage} from "../../shared/components/carousel/carousel.component
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent implements OnInit {
-  carouselImages: CarouselImage[] = [
+
+  carouselImages: CarouselItem[] = [
     {
       src: 'assets/images/projects/recommender.jpg',
-      alt: 'test '
+      alt: 'test ',
+      type: CarouselItemType.image
     },
     {
       src: 'assets/images/projects/gan.jpg',
       alt: 'test 2',
-      captionTitle: 'Test 2'
+      captionTitle: 'Test 2',
+      type: CarouselItemType.image
     },
     {
       src: 'assets/images/projects/iras.jpeg',
       alt: 'test 3',
-      captionTitle: 'Test 3'
+      captionTitle: 'Test 3',
+      type: CarouselItemType.image
     },
     {
       src: 'assets/images/projects/iras.jpeg',
       alt: 'Test2',
-      captionTitle: 'Test 4'
+      captionTitle: 'Test 4',
+      type: CarouselItemType.image
+    },
+    {
+      src: 'https://www.youtube.com/embed/c1ZLS-dnw94',
+      alt: 'Test2',
+      captionTitle: 'Test 4',
+      type: CarouselItemType.video
     }
   ];
   constructor() {

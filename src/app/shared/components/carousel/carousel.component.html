@@ -1,14 +1,22 @@
 <div class="carousel container">
-  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" [attr.data-interval]="dataInterval">
     <ol class="carousel-indicators">
-      <li *ngFor="let image of images; let i = index" [attr.data-target]="'#carouselExampleCaptions'" [attr.data-slide-to]="i" [ngClass]="{ 'active': i === 0 }"></li>
+      <li *ngFor="let item of carouselItems; let i = index" [attr.data-target]="'#carouselExampleCaptions'"
+          [attr.data-slide-to]="i" [ngClass]="{ 'active': i === 0 }"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item" *ngFor="let image of images; let i = index" [ngClass]="{ 'active': i === 0 }">
-        <img [src]="image.src" [alt]="image.alt" class="d-block w-100">
+      <div class="carousel-item" *ngFor="let item of carouselItems; let i = index" [ngClass]="{ 'active': i === 0 }">
+        <ng-container *ngIf="item.type === 0">
+          <img [src]="item.src" [alt]="item.alt" class="d-block w-100">
+        </ng-container>
+        <ng-container *ngIf="item.type === 1">
+          <iframe width="800" height="400" [src]="getSafeVideoURL(item.src)" title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+        </ng-container>
         <div class="carousel-caption d-none d-md-block">
-          <h5>{{ image.captionTitle }}</h5>
-          <p>{{ image.captionText }}</p>
+          <h5>{{ item.captionTitle }}</h5>
+          <p>{{ item.captionText }}</p>
         </div>
       </div>
     </div>

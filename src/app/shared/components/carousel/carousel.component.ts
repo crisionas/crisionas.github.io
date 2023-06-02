@@ -1,21 +1,33 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent implements OnInit {
+export class CarouselComponent {
 
-  constructor() { }
-  ngOnInit(): void {
+  constructor(private _sanitizer: DomSanitizer) {
   }
-  @Input() images: CarouselImage[] = [];
+
+  getSafeVideoURL(videoURL: string): SafeResourceUrl {
+    return this._sanitizer.bypassSecurityTrustResourceUrl(videoURL);
+  }
+
+  @Input() carouselItems: CarouselItem[] = [];
+  @Input() dataInterval: number = 0;
 }
 
-export interface CarouselImage {
+export interface CarouselItem {
   src: string;
   alt: string;
   captionTitle?: string;
   captionText?: string;
+  type: CarouselItemType;
+}
+
+export enum CarouselItemType {
+  image,
+  video
 }
