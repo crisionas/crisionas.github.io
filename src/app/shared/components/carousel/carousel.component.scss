@@ -5,3 +5,25 @@
   width: 800px;
   height: 400px;
 }
+
+@media (max-width: 767px) {
+  .carousel {
+    flex-direction: column;
+    padding-bottom: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+h5{
+  margin-bottom: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  margin-bottom: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
