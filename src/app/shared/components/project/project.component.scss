@@ -1,0 +1,13 @@
+.center-align {
+  text-align: center;
+}
+
+
+.clickable {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.clickable:hover {
+  color: red;
+}

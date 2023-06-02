@@ -11,6 +11,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {RouterModule, Routes} from "@angular/router";
 import {PortofolioPageComponent} from './portofolio/portofolio-page/portofolio-page.component';
 import {FormsModule} from "@angular/forms";
+import { ProjectComponent } from './shared/components/project/project.component';
 
 const routes: Routes = [
   {path: '', component: AboutmeComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [
     AboutmeComponent,
     NavbarComponent,
     FooterComponent,
-    PortofolioPageComponent
+    PortofolioPageComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
