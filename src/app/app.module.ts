@@ -13,7 +13,6 @@ import {PortfolioPageComponent} from './portofolio/portfolio-page/portfolio-page
 import {FormsModule} from "@angular/forms";
 import {ProjectComponent} from './shared/components/project/project.component';
 import {TestComponent} from './portofolio/test/test.component';
-import {ModalProjectsComponent} from './shared/components/modal-projects/modal-projects.component';
 
 const routes: Routes = [
   {path: '', component: AboutmeComponent},
@@ -29,8 +28,7 @@ const routes: Routes = [
     FooterComponent,
     PortfolioPageComponent,
     ProjectComponent,
-    TestComponent,
-    ModalProjectsComponent
+    TestComponent
   ],
   imports: [
     BrowserModule,
