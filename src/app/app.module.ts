@@ -9,13 +9,16 @@ import {NgxTypedJsModule} from "ngx-typed-js";
 import {MatIconModule} from "@angular/material/icon";
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {RouterModule, Routes} from "@angular/router";
-import {PortofolioPageComponent} from './portofolio/portofolio-page/portofolio-page.component';
+import {PortfolioPageComponent} from './portofolio/portfolio-page/portfolio-page.component';
 import {FormsModule} from "@angular/forms";
-import { ProjectComponent } from './shared/components/project/project.component';
+import {ProjectComponent} from './shared/components/project/project.component';
+import {TestComponent} from './portofolio/test/test.component';
+import {ModalProjectsComponent} from './shared/components/modal-projects/modal-projects.component';
 
 const routes: Routes = [
   {path: '', component: AboutmeComponent},
-  {path: 'portofolio', component: PortofolioPageComponent}
+  {path: 'portfolio', component: PortfolioPageComponent},
+  {path: 'portfolio/test', component: TestComponent},
 ];
 
 @NgModule({
@@ -24,8 +27,10 @@ const routes: Routes = [
     AboutmeComponent,
     NavbarComponent,
     FooterComponent,
-    PortofolioPageComponent,
-    ProjectComponent
+    PortfolioPageComponent,
+    ProjectComponent,
+    TestComponent,
+    ModalProjectsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,7 @@ const routes: Routes = [
     MatIconModule,
     FontAwesomeModule,
     RouterModule.forRoot(routes),
-    FormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

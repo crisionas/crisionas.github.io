@@ -1,17 +1,14 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss']
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent {
+  @Output() closeModalEvent = new EventEmitter();
 
   @Input() projectTitle: string = '';
-
   @Input() image: string = '';
-
-  ngOnInit(): void {
-  }
-
+  @Input() projectNameRoute: any = "";
 }
