@@ -17,12 +17,14 @@ import { VotingSystemComponent } from './portofolio/voting-system/voting-system.
 import { MigrationToolComponent } from './portofolio/migration-tool/migration-tool.component';
 import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
 import {YouTubePlayerModule} from "@angular/youtube-player";
+import { DirectorySyncComponent } from './portofolio/directory-sync/directory-sync.component';
 
 const routes: Routes = [
   {path: '', component: AboutmeComponent},
   {path: 'portfolio', component: PortfolioPageComponent},
   {path: 'portfolio/voting-system', component: VotingSystemComponent},
-  {path: 'portfolio/migration-tool', component: MigrationToolComponent}
+  {path: 'portfolio/migration-tool', component: MigrationToolComponent},
+  {path: 'portfolio/directory-sync', component: DirectorySyncComponent}
 ];
 
 @NgModule({
@@ -35,7 +37,8 @@ const routes: Routes = [
     ProjectComponent,
     CarouselComponent,
     VotingSystemComponent,
-    MigrationToolComponent
+    MigrationToolComponent,
+    DirectorySyncComponent
   ],
   imports: [
     BrowserModule,
