@@ -10,7 +10,7 @@ export class OneDirectorySyncComponent {
   carouselImages: CarouselItem[] = [
     {
       src: 'assets/images/projects/ods/diagram.png',
-      captionText:'Structure',
+      captionText:'System architecture',
       type: CarouselItemType.image
     },
     {

@@ -9,6 +9,11 @@ import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/c
 export class VotingSystemComponent {
   carouselImages: CarouselItem[] = [
     {
+      src: 'assets/images/projects/votingSystem/system.png',
+      captionText: 'System architecture',
+      type: CarouselItemType.image
+    },
+    {
       src: 'https://www.youtube.com/embed/bGDrMOk5eaw?controls=0&vq=hd720',
       alt: 'Web APP',
       captionText: 'Web Version',
@@ -22,8 +27,6 @@ export class VotingSystemComponent {
     },
     {
       src: 'assets/images/projects/votingSystem/diagram.png',
-      alt: 'Xamarin APP',
-      captionText: 'Diagram',
       type: CarouselItemType.image
     }
   ];

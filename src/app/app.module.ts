@@ -19,6 +19,7 @@ import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
 import {YouTubePlayerModule} from "@angular/youtube-player";
 import { DirectorySyncComponent } from './portofolio/directory-sync/directory-sync.component';
 import { OneDirectorySyncComponent } from './portofolio/one-directory-sync/one-directory-sync.component';
+import { NotificationServiceComponent } from './portofolio/notification-service/notification-service.component';
 
 const routes: Routes = [
   {path: '', component: AboutmeComponent},
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path: 'portfolio/voting-system', component: VotingSystemComponent},
   {path: 'portfolio/migration-tool', component: MigrationToolComponent},
   {path: 'portfolio/directory-sync', component: DirectorySyncComponent},
-  {path: 'portfolio/one-directory-sync', component: OneDirectorySyncComponent}
+  {path: 'portfolio/one-directory-sync', component: OneDirectorySyncComponent},
+  {path: 'portfolio/notification-service', component: NotificationServiceComponent}
 ];
 
 @NgModule({
@@ -41,7 +43,8 @@ const routes: Routes = [
     VotingSystemComponent,
     MigrationToolComponent,
     DirectorySyncComponent,
-    OneDirectorySyncComponent
+    OneDirectorySyncComponent,
+    NotificationServiceComponent
   ],
   imports: [
     BrowserModule,

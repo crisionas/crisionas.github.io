@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/carousel.component";
 
 @Component({
@@ -6,20 +6,8 @@ import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/c
   templateUrl: './migration-tool.component.html',
   styleUrls: ['./migration-tool.component.scss']
 })
-export class MigrationToolComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-
-
+export class MigrationToolComponent {
   carouselImages: CarouselItem[] = [
-    {
-      src: 'assets/images/projects/migrationTool/overview1.png',
-      type: CarouselItemType.image
-    },
     {
       src: 'assets/images/projects/migrationTool/initial.png',
       type: CarouselItemType.image
@@ -27,7 +15,7 @@ export class MigrationToolComponent implements OnInit {
     {
       src: 'assets/images/projects/migrationTool/choose-db.png',
       type: CarouselItemType.image
-    },    {
+    }, {
       src: 'assets/images/projects/migrationTool/migration-in-progress.png',
       type: CarouselItemType.image
     },

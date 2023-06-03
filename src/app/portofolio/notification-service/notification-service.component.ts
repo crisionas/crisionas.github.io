@@ -2,17 +2,17 @@ import {Component} from '@angular/core';
 import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/carousel.component";
 
 @Component({
-  selector: 'app-directory-sync',
-  templateUrl: './directory-sync.component.html',
-  styleUrls: ['./directory-sync.component.scss']
+  selector: 'app-notification-service',
+  templateUrl: './notification-service.component.html',
+  styleUrls: ['./notification-service.component.scss']
 })
-export class DirectorySyncComponent {
-
+export class NotificationServiceComponent {
   carouselImages: CarouselItem[] = [
     {
-      src: 'assets/images/projects/directorySync/synchronization.png',
+      src: 'assets/images/projects/notificationService/diagram.png',
       captionText: 'System architecture',
       type: CarouselItemType.image
     }
   ];
+
 }
