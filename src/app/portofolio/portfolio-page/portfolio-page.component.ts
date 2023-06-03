@@ -8,9 +8,11 @@ import {Component} from '@angular/core';
 export class PortfolioPageComponent {
 
   projects = [
-    {title: 'Twitter Analysis', image: 'assets/images/projects/twitteranalysis.jpg', projectNameRoute: "test"},
+    {title: 'One Directory Sync', image: 'assets/images/projects/twitteranalysis.jpg', projectNameRoute: "one-directory-sync"},
+    {title: 'One Directory Sync', image: 'assets/images/projects/twitteranalysis.jpg', projectNameRoute: "one-directory-sync"},
+    {title: 'One Directory Sync', image: 'assets/images/projects/ods/overview.png', projectNameRoute: "one-directory-sync"},
     {title: 'Directory Sync', image: 'assets/images/projects/directorySync/directory.png', projectNameRoute: "directory-sync"},
     {title: 'Migration Tool', image: 'assets/images/projects/migrationTool/overview.png', projectNameRoute: "migration-tool"},
-    {title: 'SecureVote: Blockchain-Powered Voting System', image: 'assets/images/projects/votingSystem/blockchain-voting.png', projectNameRoute: "voting-system"},
+    {title: 'SecureVote', image: 'assets/images/projects/votingSystem/blockchain-voting.png', projectNameRoute: "voting-system"},
   ];
 }
