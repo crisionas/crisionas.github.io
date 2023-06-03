@@ -1,75 +1,37 @@
 <div class="container">
   <div class="ci-content-section">
-    <h1 class="heading-primary">SecureVote: Blockchain-Powered Voting System</h1>
+    <h1 class="heading-primary">Migration Tool</h1>
     <div class="project-details main-container">
-      <app-carousel [carouselItems]="carouselImages" [height]="carouselHeight" [width]="carouselWidth"></app-carousel>
+      <app-carousel [carouselItems]="carouselImages"></app-carousel>
 
       <section id="projectCharacteristics" class="about tools-used">
         <h2 class="ci-heading">Characteristics</h2>
-        <p><b>Project Type:</b> Personal</p>
-        <p><b>Period:</b> September 2020 - January 2021</p>
+        <p><b>Project Type:</b> Enterprise - OpenLM</p>
+        <p><b>Period:</b> February 2021 - May 2021</p>
       </section>
 
       <section id="projectOverview" class="about tools-used">
         <h2 class="ci-heading">Overview</h2>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Voting system utilizing Blockchain Technology is a
-          collaborative university endeavor that aims to revolutionize referendums and elections by leveraging
-          blockchain technology and a consensus mechanism. The primary objective is to establish an immutable voting
-          record and ensure the accuracy of the results.
-        </p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Within this system, each voter is provided with a distinct digital
-          identity and a private key, enabling them to cast their vote. These votes are then securely recorded on a
-          blockchain ledger. To guarantee the precision and reliability of the election outcomes, a consensus mechanism
-          is employed, which involves a network of nodes validating and approving the votes.</p>
-
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The project encompasses 7 services, 5 developed by me:</p>
-
-        <ol class="list">
-          <li><b>Terminal</b>: This component serves as as the central hub, acts as the homepage and facilitates
-            essential functions such as seamless authentication, authorization, and the actual voting process.
-          </li>
-          <ul class="nested-list">
-            <li><b>Web version</b>: Specifically designed for web access, the Web version service leverages the robust
-              capabilities of the .NET MVC framework.
-            </li>
-            <li><b>Mobile app</b>: Developed using Xamarin, this service caters to users who prefer to vote via a mobile
-              application.
-            </li>
-          </ul>
-          <li><b>Observer</b>: The Observer microservice plays a vital role in monitoring and tracking election results
-            on both national and regional scales. With real-time updates and comprehensive analysis, the Observer
-            service provides stakeholders with valuable insights into the progress and outcome of elections.
-          </li>
-          <li><b>Administrator</b>: The service is responsible for validating voters and votes. In addition, the
-            Administrator manages the data to LoadBalancer of the blockchain system. This service guarantees the
-            integrity and smooth operation of the entire voting process.
-          </li>
-          <li><b>LoadBalancer</b>: This microservice, developed by my colleague, efficiently distributes the
-            computational load and validates nodes using a consensus mechanism.
-          </li>
-
-          <li><b>Node</b>: The Node microservice, developed by my colleague, acts as the backbone of our voting
-            system. Multiple nodes collaborate to validate votes, participate in the consensus mechanism, and ensure
-            accurate and immutable election results. This distributed approach enhances security and guarantees a
-            tamper-proof foundation for our blockchain-based voting system.
-          </li>
-        </ol>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This project involved creating a migration tool using .NET WPF to
+          facilitate the seamless transfer of clients that
+          used old databases of Firebird to MariaDB. The tool offers a user-friendly interface for selecting the
+          source Firebird database and configuring the MariaDB connection. It performs schema conversion, data transfer,
+          and ensures data integrity during the migration process. The tool includes error handling, progress tracking,
+          and customization options. The completed project delivers a seamless and efficient migration experience from
+          Firebird to MariaDB.</p>
       </section>
 
       <section id="achievments" class="about tools-used">
         <h2 class="ci-heading">Achievements</h2>
         <ul class="nested-list">
-          <li><b>Identity Management</b>: Each voter is assigned a unique digital identity, authenticated with biometric
-            verification, ensuring a <b>99%</b> accuracy rate in verifying voter information.
+          <li><b>Migration Time Efficiency</b>: The tool demonstrated improved efficiency, reducing the average
+            migration time from Firebird to MariaDB by
+            60% compared to manual migration methods, saving users valuable time.
           </li>
-          <li><b>Blockchain Ledger</b>: A decentralized blockchain ledger guarantees an immutable record of votes, preventing
-            any tampering or alteration, ensuring a <b>100%</b> incorruptible voting history.
+          <li><b>Successful Migrations</b>The tool successfully migrated more than 100 databases.
           </li>
-          <li><b>Consensus Mechanism</b>: A robust consensus mechanism, achieved with a <b>97% </b>accuracy rate, validates and
-            approves votes, ensuring that only legitimate votes are counted.
-          </li>
-          <li><b>Security and Privacy</b>: With state-of-the-art encryption protocols, SecureVote achieves a <b>99%</b> level of
-            security, safeguarding the privacy and anonymity of voters.
+          <li><b>Cost Savings</b>: By utilizing the migration tool, users achieved cost savings of $10,000 by avoiding
+            manual migration efforts and minimizing downtime during the transition.
           </li>
         </ul>
       </section>
@@ -77,31 +39,12 @@
       <section id="tools" class="about tools-used">
         <h2 class="ci-heading">Tools Used</h2>
         <div class="skills">
-          <div class="skill">HTML</div>
-          <div class="skill">CSS</div>
-          <div class="skill">JavaScript</div>
-          <div class="skill">jQuery</div>
-          <div class="skill">ASP.NET MVC</div>
-          <div class="skill">ASP.NET Web API</div>
+          <div class="skill">ASP.NET WPF</div>
+          <div class="skill">XAML</div>
+          <div class="skill">Firebird</div>
+          <div class="skill">MariaDB</div>
+          <div class="skill">SQL</div>
           <div class="skill">GIT</div>
-          <div class="skill">Xamarin Forms</div>
-          <div class="skill">MSSQL</div>
-          <div class="skill">Android</div>
-          <div class="skill">IOS</div>
-          <div class="skill">RabbitMQ</div>
-          <div class="skill">Docker</div>
-          <div class="skill">Kubernetes</div>
-        </div>
-      </section>
-
-      <section id="seeLive" class="about tools-used">
-        <h2 class="ci-heading">See Live</h2>
-        <div class="ci-button-container">
-          <a href="https://github.com/crisionas/RVT_WebTerminalCI" class="ci-button">Web Terminal</a>
-          <a href="https://github.com/crisionas/RVTMobile" class="ci-button">Mobile Terminal</a>
-          <a href="https://github.com/crisionas/RVT-Observer" class="ci-button">Observer</a>
-          <a href="https://github.com/mrelectrq/RVT_LoadBalancer" class="ci-button">LoadBalancer</a>
-          <a href="https://github.com/mrelectrq/RVT.Node" class="ci-button">Node</a>
         </div>
       </section>
     </div>

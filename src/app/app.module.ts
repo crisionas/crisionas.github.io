@@ -12,15 +12,16 @@ import {RouterModule, Routes} from "@angular/router";
 import {PortfolioPageComponent} from './portofolio/portfolio-page/portfolio-page.component';
 import {FormsModule} from "@angular/forms";
 import {ProjectComponent} from './shared/components/project/project.component';
-import {TestComponent} from './portofolio/test/test.component';
 import { CarouselComponent } from './shared/components/carousel/carousel.component';
 import { VotingSystemComponent } from './portofolio/voting-system/voting-system.component';
 import { MigrationToolComponent } from './portofolio/migration-tool/migration-tool.component';
+import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
+import {CarouselModule} from "ngx-owl-carousel-o";
+import {YouTubePlayerModule} from "@angular/youtube-player";
 
 const routes: Routes = [
   {path: '', component: AboutmeComponent},
   {path: 'portfolio', component: PortfolioPageComponent},
-  {path: 'portfolio/test', component: TestComponent},
   {path: 'portfolio/voting-system', component: VotingSystemComponent},
   {path: 'portfolio/migration-tool', component: MigrationToolComponent}
 ];
@@ -33,7 +34,6 @@ const routes: Routes = [
     FooterComponent,
     PortfolioPageComponent,
     ProjectComponent,
-    TestComponent,
     CarouselComponent,
     VotingSystemComponent,
     MigrationToolComponent
@@ -45,7 +45,12 @@ const routes: Routes = [
     MatIconModule,
     FontAwesomeModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    CarouselModule,
+    NgbCarouselModule,
+    CarouselModule,
+    YouTubePlayerModule,
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

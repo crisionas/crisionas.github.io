@@ -8,8 +8,6 @@ import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/c
 })
 export class MigrationToolComponent implements OnInit {
 
-  carouselWidth='760';
-  carouselHeight='415';
   constructor() { }
 
   ngOnInit(): void {
@@ -19,10 +17,23 @@ export class MigrationToolComponent implements OnInit {
 
   carouselImages: CarouselItem[] = [
     {
-      src: 'assets/images/projects/migrationTool/overview.png',
-      alt: 'Web APP',
-      captionText:'Web Version',
+      src: 'assets/images/projects/migrationTool/overview1.png',
       type: CarouselItemType.image
-    }
+    },
+    {
+      src: 'assets/images/projects/migrationTool/initial.png',
+      type: CarouselItemType.image
+    },
+    {
+      src: 'assets/images/projects/migrationTool/choose-db.png',
+      type: CarouselItemType.image
+    },    {
+      src: 'assets/images/projects/migrationTool/migration-in-progress.png',
+      type: CarouselItemType.image
+    },
+    {
+      src: 'assets/images/projects/migrationTool/db-configuration.png',
+      type: CarouselItemType.image
+    },
   ];
 }
