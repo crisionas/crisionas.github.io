@@ -14,11 +14,15 @@ import {FormsModule} from "@angular/forms";
 import {ProjectComponent} from './shared/components/project/project.component';
 import {TestComponent} from './portofolio/test/test.component';
 import { CarouselComponent } from './shared/components/carousel/carousel.component';
+import { VotingSystemComponent } from './portofolio/voting-system/voting-system.component';
+import { MigrationToolComponent } from './portofolio/migration-tool/migration-tool.component';
 
 const routes: Routes = [
   {path: '', component: AboutmeComponent},
   {path: 'portfolio', component: PortfolioPageComponent},
   {path: 'portfolio/test', component: TestComponent},
+  {path: 'portfolio/voting-system', component: VotingSystemComponent},
+  {path: 'portfolio/migration-tool', component: MigrationToolComponent}
 ];
 
 @NgModule({
@@ -30,7 +34,9 @@ const routes: Routes = [
     PortfolioPageComponent,
     ProjectComponent,
     TestComponent,
-    CarouselComponent
+    CarouselComponent,
+    VotingSystemComponent,
+    MigrationToolComponent
   ],
   imports: [
     BrowserModule,

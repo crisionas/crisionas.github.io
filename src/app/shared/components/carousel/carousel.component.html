@@ -1,4 +1,4 @@
-<div class="carousel container">
+<div id="carouselContainer" class="carousel container">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" [attr.data-interval]="dataInterval">
     <ol class="carousel-indicators">
       <li *ngFor="let item of carouselItems; let i = index" [attr.data-target]="'#carouselExampleCaptions'"
@@ -10,7 +10,7 @@
           <img [src]="item.src" [alt]="item.alt" class="d-block w-100">
         </ng-container>
         <ng-container *ngIf="item.type === 1">
-          <iframe width="800" height="400" [src]="getSafeVideoURL(item.src)" title="YouTube video player"
+          <iframe width="{{width}}" height="{{height}}" [src]="getSafeVideoURL(item.src)" title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen></iframe>
         </ng-container>

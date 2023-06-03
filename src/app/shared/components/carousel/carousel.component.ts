@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {AfterViewInit, Component, Input} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
 @Component({
@@ -6,9 +6,10 @@ import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent {
+export class CarouselComponent implements AfterViewInit{
 
   constructor(private _sanitizer: DomSanitizer) {
+
   }
 
   getSafeVideoURL(videoURL: string): SafeResourceUrl {
@@ -17,6 +18,17 @@ export class CarouselComponent {
 
   @Input() carouselItems: CarouselItem[] = [];
   @Input() dataInterval: number = 0;
+
+  @Input() height: string = '760';
+  @Input() width: string = '415';
+
+  ngAfterViewInit(): void {
+    const carouselDiv = document.getElementById("carouselContainer");
+    if (carouselDiv) {
+      carouselDiv.style.width = this.width + "px";
+      carouselDiv.style.height = this.height + "px";
+    }
+  }
 }
 
 export interface CarouselItem {
