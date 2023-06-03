@@ -1,11 +1,11 @@
 <div id="carouselContainer" class="carousel container">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" [attr.data-interval]="dataInterval">
-    <ol class="carousel-indicators">
-      <div *ngFor="let item of carouselItems; let i = index">
-        <li *ngIf="i>1" [attr.data-target]="'#carouselExampleCaptions'"
-            [attr.data-slide-to]="i" [ngClass]="{ 'active': i === 1 }"></li>
-      </div>
-    </ol>
+    <div *ngIf="carouselItems.length>1">
+      <ol class="carousel-indicators">
+        <li *ngFor="let item of carouselItems; let i = index" [attr.data-target]="'#carouselExampleCaptions'"
+            [attr.data-slide-to]="i" [ngClass]="{ 'active': i === 0 }"></li>
+      </ol>
+    </div>
     <div class="carousel-inner">
       <div class="carousel-item" *ngFor="let item of carouselItems; let i = index" [ngClass]="{ 'active': i === 0 }">
         <ng-container *ngIf="item.type === 0">
