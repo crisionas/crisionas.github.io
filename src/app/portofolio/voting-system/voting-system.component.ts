@@ -8,8 +8,6 @@ import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/c
 })
 export class VotingSystemComponent implements OnInit {
 
-  carouselWidth='760';
-  carouselHeight='415';
   constructor() { }
 
   ngOnInit(): void {

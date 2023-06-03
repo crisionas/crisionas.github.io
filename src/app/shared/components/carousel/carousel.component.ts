@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
 @Component({
@@ -6,7 +6,7 @@ import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent implements AfterViewInit{
+export class CarouselComponent{
 
   constructor(private _sanitizer: DomSanitizer) {
 
@@ -19,21 +19,13 @@ export class CarouselComponent implements AfterViewInit{
   @Input() carouselItems: CarouselItem[] = [];
   @Input() dataInterval: number = 0;
 
-  @Input() height: string = '760';
-  @Input() width: string = '415';
-
-  ngAfterViewInit(): void {
-    const carouselDiv = document.getElementById("carouselContainer");
-    if (carouselDiv) {
-      carouselDiv.style.width = this.width + "px";
-      carouselDiv.style.height = this.height + "px";
-    }
-  }
+  @Input() height: number = 760;
+  @Input() width: number = 415;
 }
 
 export interface CarouselItem {
   src: string;
-  alt: string;
+  alt?: string;
   captionTitle?: string;
   captionText?: string;
   type: CarouselItemType;

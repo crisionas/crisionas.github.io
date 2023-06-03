@@ -16,7 +16,6 @@ import { CarouselComponent } from './shared/components/carousel/carousel.compone
 import { VotingSystemComponent } from './portofolio/voting-system/voting-system.component';
 import { MigrationToolComponent } from './portofolio/migration-tool/migration-tool.component';
 import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
-import {CarouselModule} from "ngx-owl-carousel-o";
 import {YouTubePlayerModule} from "@angular/youtube-player";
 
 const routes: Routes = [
@@ -46,9 +45,7 @@ const routes: Routes = [
     FontAwesomeModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    CarouselModule,
     NgbCarouselModule,
-    CarouselModule,
     YouTubePlayerModule,
     BrowserModule
   ],

@@ -7,10 +7,10 @@
     <div class="carousel-inner">
       <div class="carousel-item" *ngFor="let item of carouselItems; let i = index" [ngClass]="{ 'active': i === 0 }">
         <ng-container *ngIf="item.type === 0">
-          <img [src]="item.src" [alt]="item.alt" class="d-block w-100">
+          <img [src]="item.src" [alt]="item.alt">
         </ng-container>
         <ng-container *ngIf="item.type === 1">
-          <iframe width="{{width}}" height="{{height}}" [src]="getSafeVideoURL(item.src)" title="YouTube video player"
+          <iframe [width]="height" [height]="width" [src]="getSafeVideoURL(item.src)" title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen></iframe>
         </ng-container>
