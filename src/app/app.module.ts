@@ -21,6 +21,7 @@ import {OneDirectorySyncComponent} from './portofolio/one-directory-sync/one-dir
 import {NotificationServiceComponent} from './portofolio/notification-service/notification-service.component';
 import {InsuranceProcessesComponent} from './portofolio/insurance-processes/insurance-processes.component';
 import { BrokerCloudComponent } from './portofolio/broker-cloud/broker-cloud.component';
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { BrokerCloudComponent } from './portofolio/broker-cloud/broker-cloud.com
     YouTubePlayerModule,
     BrowserModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule {
