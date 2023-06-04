@@ -52,7 +52,7 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
     YouTubePlayerModule,
     BrowserModule
   ],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
