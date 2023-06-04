@@ -1,4 +1,5 @@
 import {Component, ElementRef, HostListener, OnInit, Renderer2} from '@angular/core';
+import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -6,12 +7,19 @@ import {Component, ElementRef, HostListener, OnInit, Renderer2} from '@angular/c
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private elRef: ElementRef, private renderer: Renderer2) {
+  constructor(private elRef: ElementRef, private renderer: Renderer2, private router: Router) {
   }
 
   ngOnInit() {
     const mastHeadHeight = this.elRef.nativeElement.querySelector('.ci-header').offsetHeight;
     this.renderer.setStyle(this.elRef.nativeElement.querySelector('.ci-banner'), 'marginTop', `${mastHeadHeight}px`);
+    this.router.events.subscribe(async (event) => {
+      if (event instanceof NavigationEnd) {
+        if (event.url.includes('#portfolio')) {
+          await this.router.navigate(['/portfolio']);
+        }
+      }
+    });
   }
 
   @HostListener('window:scroll', [])
