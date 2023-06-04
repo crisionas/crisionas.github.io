@@ -6,9 +6,7 @@ import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/c
   templateUrl: './directory-sync.component.html',
   styleUrls: ['./directory-sync.component.scss']
 })
-export class DirectorySyncComponent {
-
-  carouselImages: CarouselItem[] = [
+export class DirectorySyncComponent {  carouselImages: CarouselItem[] = [
     {
       src: 'assets/images/projects/directorySync/synchronization.png',
       captionText: 'System architecture',
