@@ -1,5 +1,7 @@
 import {Component, ElementRef, HostListener, OnInit, Renderer2} from '@angular/core';
-import {NavigationEnd, Router} from "@angular/router";
+import {
+  UrlFragmentNavigationService
+} from "./shared/services/UrlFragmentNavigationService/url-fragment-navigation-service";
 
 @Component({
   selector: 'app-root',
@@ -7,19 +9,13 @@ import {NavigationEnd, Router} from "@angular/router";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private elRef: ElementRef, private renderer: Renderer2, private router: Router) {
+  constructor(private elRef: ElementRef, private renderer: Renderer2, private urlFragmentNavigationService: UrlFragmentNavigationService) {
   }
 
   ngOnInit() {
     const mastHeadHeight = this.elRef.nativeElement.querySelector('.ci-header').offsetHeight;
     this.renderer.setStyle(this.elRef.nativeElement.querySelector('.ci-banner'), 'marginTop', `${mastHeadHeight}px`);
-    this.router.events.subscribe(async (event) => {
-      if (event instanceof NavigationEnd) {
-        if (event.url.includes('#portfolio')) {
-          await this.router.navigate(['/portfolio']);
-        }
-      }
-    });
+    this.urlFragmentNavigationService.handleUrlFragmentNavigation();
   }
 
   @HostListener('window:scroll', [])

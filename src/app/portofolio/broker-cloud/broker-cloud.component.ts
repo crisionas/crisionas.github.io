@@ -10,12 +10,12 @@ export class BrokerCloudComponent {
   carouselImages: CarouselItem[] = [
     {
       src: 'assets/images/projects/brokerCloud/diagram.png',
-      captionText:'System Architecture Diagram',
+      captionText: 'System Architecture Diagram',
       type: CarouselItemType.image
     },
     {
       src: 'assets/images/projects/brokerCloud/dynamicForm.png',
-      captionText:'Example of Dynamic Form Rendering',
+      captionText: 'Example of Dynamic Form Rendering',
       type: CarouselItemType.image
     }
   ];

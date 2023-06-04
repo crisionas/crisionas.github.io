@@ -21,7 +21,7 @@ import {OneDirectorySyncComponent} from './portofolio/one-directory-sync/one-dir
 import {NotificationServiceComponent} from './portofolio/notification-service/notification-service.component';
 import {InsuranceProcessesComponent} from './portofolio/insurance-processes/insurance-processes.component';
 import { BrokerCloudComponent } from './portofolio/broker-cloud/broker-cloud.component';
-import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+import {NavigationEnd, Router} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -46,7 +46,6 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
     NgxTypedJsModule,
     MatIconModule,
     FontAwesomeModule,
-    // RouterModule.forRoot(routes),
     FormsModule,
     NgbCarouselModule,
     YouTubePlayerModule,
@@ -56,4 +55,11 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  constructor(private router: Router){
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd){
+        window.scrollTo(0,0);
+      }
+    });
+  }
 }
