@@ -12,14 +12,15 @@ import {RouterModule, Routes} from "@angular/router";
 import {PortfolioPageComponent} from './portofolio/portfolio-page/portfolio-page.component';
 import {FormsModule} from "@angular/forms";
 import {ProjectComponent} from './shared/components/project/project.component';
-import { CarouselComponent } from './shared/components/carousel/carousel.component';
-import { VotingSystemComponent } from './portofolio/voting-system/voting-system.component';
-import { MigrationToolComponent } from './portofolio/migration-tool/migration-tool.component';
+import {CarouselComponent} from './shared/components/carousel/carousel.component';
+import {VotingSystemComponent} from './portofolio/voting-system/voting-system.component';
+import {MigrationToolComponent} from './portofolio/migration-tool/migration-tool.component';
 import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
 import {YouTubePlayerModule} from "@angular/youtube-player";
-import { DirectorySyncComponent } from './portofolio/directory-sync/directory-sync.component';
-import { OneDirectorySyncComponent } from './portofolio/one-directory-sync/one-directory-sync.component';
-import { NotificationServiceComponent } from './portofolio/notification-service/notification-service.component';
+import {DirectorySyncComponent} from './portofolio/directory-sync/directory-sync.component';
+import {OneDirectorySyncComponent} from './portofolio/one-directory-sync/one-directory-sync.component';
+import {NotificationServiceComponent} from './portofolio/notification-service/notification-service.component';
+import {InsuranceProcessesComponent} from './portofolio/insurance-processes/insurance-processes.component';
 
 const routes: Routes = [
   {path: '', component: AboutmeComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'portfolio/migration-tool', component: MigrationToolComponent},
   {path: 'portfolio/directory-sync', component: DirectorySyncComponent},
   {path: 'portfolio/one-directory-sync', component: OneDirectorySyncComponent},
-  {path: 'portfolio/notification-service', component: NotificationServiceComponent}
+  {path: 'portfolio/notification-service', component: NotificationServiceComponent},
+  {path: 'portfolio/insurance-processes', component: InsuranceProcessesComponent}
 ];
 
 @NgModule({
@@ -44,7 +46,8 @@ const routes: Routes = [
     MigrationToolComponent,
     DirectorySyncComponent,
     OneDirectorySyncComponent,
-    NotificationServiceComponent
+    NotificationServiceComponent,
+    InsuranceProcessesComponent
   ],
   imports: [
     BrowserModule,
