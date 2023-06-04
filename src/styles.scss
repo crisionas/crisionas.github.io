@@ -103,6 +103,7 @@ svg, img {
 
 .ci-content-section li,
 .ci-content-section ol,
+.ci-content-section ul,
 .ci-content-section p {
   color: #373737;
   font-size: 21px;
@@ -124,10 +125,15 @@ svg, img {
 
   .ci-content-section li,
   .ci-content-section ol,
+  .ci-content-section ul,
   .ci-content-section p {
     font-size: 15px;
     line-height: 30px;
     margin-bottom: 30px;
+  }
+
+  .ci-content-section ul{
+    margin-left: 20px;
   }
 }
 

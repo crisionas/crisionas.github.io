@@ -10,6 +10,7 @@ import {NavigationEnd, Router} from "@angular/router";
 })
 export class NavbarComponent implements OnInit {
 
+  isPortofolioEnabled = true;
   faInstagram = faInstagram;
   faLinkedin = faLinkedinIn;
   faFacebook = faFacebookF;
