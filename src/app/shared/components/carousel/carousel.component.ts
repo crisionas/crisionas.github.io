@@ -6,7 +6,7 @@ import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent{
+export class CarouselComponent {
 
   constructor(private _sanitizer: DomSanitizer) {
 
@@ -18,7 +18,7 @@ export class CarouselComponent{
 
   @Input() carouselItems: CarouselItem[] = [];
   @Input() dataInterval: number = 0;
-
+  @Input() description?: string;
   @Input() height: number = 760;
   @Input() width: number = 415;
 }
