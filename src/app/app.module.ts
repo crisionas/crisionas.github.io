@@ -20,7 +20,7 @@ import {DirectorySyncComponent} from './portofolio/directory-sync/directory-sync
 import {OneDirectorySyncComponent} from './portofolio/one-directory-sync/one-directory-sync.component';
 import {NotificationServiceComponent} from './portofolio/notification-service/notification-service.component';
 import {InsuranceProcessesComponent} from './portofolio/insurance-processes/insurance-processes.component';
-import {CloudSyncComponent} from './portofolio/cloud-sync/cloud-sync.component';
+import { BrokerCloudComponent } from './portofolio/broker-cloud/broker-cloud.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import {CloudSyncComponent} from './portofolio/cloud-sync/cloud-sync.component';
     OneDirectorySyncComponent,
     NotificationServiceComponent,
     InsuranceProcessesComponent,
-    CloudSyncComponent
+    BrokerCloudComponent
   ],
   imports: [
     BrowserModule,

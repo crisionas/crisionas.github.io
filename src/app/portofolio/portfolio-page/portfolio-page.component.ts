@@ -8,7 +8,7 @@ import {Component} from '@angular/core';
 export class PortfolioPageComponent {
 
   projects = [
-    {title: 'Cloud Sync', image: 'assets/images/projects/cloudSync/overview.png', projectNameRoute: "cloud-sync"},
+    {title: 'Broker Cloud', image: 'assets/images/projects/brokerCloud/overview.png', projectNameRoute: "broker-cloud"},
     {title: 'Insurance Processes', image: 'assets/images/projects/insurance/overview.png', projectNameRoute: "insurance-processes"},
     {title: 'Notification Service', image: 'assets/images/projects/notificationService/overview.png', projectNameRoute: "notification-service"},
     {title: 'One Directory Sync', image: 'assets/images/projects/ods/overview.png', projectNameRoute: "one-directory-sync"},

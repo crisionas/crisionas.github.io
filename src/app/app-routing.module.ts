@@ -8,6 +8,7 @@ import {DirectorySyncComponent} from "./portofolio/directory-sync/directory-sync
 import {OneDirectorySyncComponent} from "./portofolio/one-directory-sync/one-directory-sync.component";
 import {NotificationServiceComponent} from "./portofolio/notification-service/notification-service.component";
 import {InsuranceProcessesComponent} from "./portofolio/insurance-processes/insurance-processes.component";
+import {BrokerCloudComponent} from "./portofolio/broker-cloud/broker-cloud.component";
 
 const routes: Routes = [
   {path: '', component: AboutmeComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'portfolio/directory-sync', component: DirectorySyncComponent},
   {path: 'portfolio/one-directory-sync', component: OneDirectorySyncComponent},
   {path: 'portfolio/notification-service', component: NotificationServiceComponent},
-  {path: 'portfolio/insurance-processes', component: InsuranceProcessesComponent}
+  {path: 'portfolio/insurance-processes', component: InsuranceProcessesComponent},
+  {path: 'portfolio/broker-cloud', component: BrokerCloudComponent}
 ];
 
 @NgModule({
