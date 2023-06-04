@@ -8,7 +8,6 @@ import {FooterComponent} from './shared/components/footer/footer.component';
 import {NgxTypedJsModule} from "ngx-typed-js";
 import {MatIconModule} from "@angular/material/icon";
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {RouterModule, Routes} from "@angular/router";
 import {PortfolioPageComponent} from './portofolio/portfolio-page/portfolio-page.component';
 import {FormsModule} from "@angular/forms";
 import {ProjectComponent} from './shared/components/project/project.component';
@@ -21,17 +20,7 @@ import {DirectorySyncComponent} from './portofolio/directory-sync/directory-sync
 import {OneDirectorySyncComponent} from './portofolio/one-directory-sync/one-directory-sync.component';
 import {NotificationServiceComponent} from './portofolio/notification-service/notification-service.component';
 import {InsuranceProcessesComponent} from './portofolio/insurance-processes/insurance-processes.component';
-
-const routes: Routes = [
-  {path: '', component: AboutmeComponent},
-  {path: 'portfolio', component: PortfolioPageComponent},
-  {path: 'portfolio/voting-system', component: VotingSystemComponent},
-  {path: 'portfolio/migration-tool', component: MigrationToolComponent},
-  {path: 'portfolio/directory-sync', component: DirectorySyncComponent},
-  {path: 'portfolio/one-directory-sync', component: OneDirectorySyncComponent},
-  {path: 'portfolio/notification-service', component: NotificationServiceComponent},
-  {path: 'portfolio/insurance-processes', component: InsuranceProcessesComponent}
-];
+import {CloudSyncComponent} from './portofolio/cloud-sync/cloud-sync.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +36,8 @@ const routes: Routes = [
     DirectorySyncComponent,
     OneDirectorySyncComponent,
     NotificationServiceComponent,
-    InsuranceProcessesComponent
+    InsuranceProcessesComponent,
+    CloudSyncComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +45,7 @@ const routes: Routes = [
     NgxTypedJsModule,
     MatIconModule,
     FontAwesomeModule,
-    RouterModule.forRoot(routes),
+    // RouterModule.forRoot(routes),
     FormsModule,
     NgbCarouselModule,
     YouTubePlayerModule,
