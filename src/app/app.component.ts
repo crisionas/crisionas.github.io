@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     const mastHeadHeight = this.elRef.nativeElement.querySelector('.ci-header').offsetHeight;
     this.renderer.setStyle(this.elRef.nativeElement.querySelector('.ci-banner'), 'marginTop', `${mastHeadHeight}px`);
-    this.renderer.setStyle(this.elRef.nativeElement.querySelector('.ci-main-section'), 'marginTop', `${mastHeadHeight}px`);
   }
 
   @HostListener('window:scroll', [])

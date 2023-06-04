@@ -1,0 +1,11 @@
+<div class="project">
+  <h4 class="center-align" [routerLink]="['/portfolio/' + projectNameRoute]">{{ projectTitle }}</h4>
+  <div class="clickable-div" [routerLink]="['/portfolio/' + projectNameRoute]" title="{{projectTitle}}">
+    <div class="image-container">
+      <img src="{{image}}" alt="Image">
+      <span class="info-icon">
+    <i class="fas fa-info-circle"></i>
+  </span>
+    </div>
+  </div>
+</div>
