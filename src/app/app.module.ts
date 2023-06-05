@@ -15,7 +15,6 @@ import {CarouselComponent} from './shared/components/carousel/carousel.component
 import {VotingSystemComponent} from './portofolio/voting-system/voting-system.component';
 import {MigrationToolComponent} from './portofolio/migration-tool/migration-tool.component';
 import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
-import {YouTubePlayerModule} from "@angular/youtube-player";
 import {DirectorySyncComponent} from './portofolio/directory-sync/directory-sync.component';
 import {OneDirectorySyncComponent} from './portofolio/one-directory-sync/one-directory-sync.component';
 import {NotificationServiceComponent} from './portofolio/notification-service/notification-service.component';
@@ -48,7 +47,6 @@ import {NavigationEnd, Router} from "@angular/router";
     FontAwesomeModule,
     FormsModule,
     NgbCarouselModule,
-    YouTubePlayerModule,
     BrowserModule
   ],
   providers: [],
