@@ -15,12 +15,11 @@ import {CarouselComponent} from './shared/components/carousel/carousel.component
 import {VotingSystemComponent} from './portofolio/voting-system/voting-system.component';
 import {MigrationToolComponent} from './portofolio/migration-tool/migration-tool.component';
 import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
-import {YouTubePlayerModule} from "@angular/youtube-player";
 import {DirectorySyncComponent} from './portofolio/directory-sync/directory-sync.component';
 import {OneDirectorySyncComponent} from './portofolio/one-directory-sync/one-directory-sync.component';
 import {NotificationServiceComponent} from './portofolio/notification-service/notification-service.component';
 import {InsuranceProcessesComponent} from './portofolio/insurance-processes/insurance-processes.component';
-import { BrokerCloudComponent } from './portofolio/broker-cloud/broker-cloud.component';
+import {BrokerCloudComponent} from './portofolio/broker-cloud/broker-cloud.component';
 import {NavigationEnd, Router} from "@angular/router";
 
 @NgModule({
@@ -48,17 +47,16 @@ import {NavigationEnd, Router} from "@angular/router";
     FontAwesomeModule,
     FormsModule,
     NgbCarouselModule,
-    YouTubePlayerModule,
     BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private router: Router){
+  constructor(private router: Router) {
     this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd){
-        window.scrollTo(0,0);
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
       }
     });
   }
