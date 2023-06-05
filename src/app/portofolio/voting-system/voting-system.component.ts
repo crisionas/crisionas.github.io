@@ -1,12 +1,13 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/carousel.component";
+import {MixpanelService} from "../../shared/services/mixpanel/mixpanel.service";
 
 @Component({
   selector: 'app-voting-system',
   templateUrl: './voting-system.component.html',
   styleUrls: ['./voting-system.component.scss']
 })
-export class VotingSystemComponent {
+export class VotingSystemComponent implements OnInit{
   carouselImages: CarouselItem[] = [
     {
       src: 'assets/images/projects/votingSystem/system.png',
@@ -30,4 +31,11 @@ export class VotingSystemComponent {
       type: CarouselItemType.image
     }
   ];
+
+  constructor(private mixpanelService: MixpanelService) {
+  }
+
+  ngOnInit(): void {
+    this.mixpanelService.track('VotingSystemComponent Opened');
+  }
 }
