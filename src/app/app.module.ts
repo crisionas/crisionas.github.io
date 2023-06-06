@@ -19,7 +19,7 @@ import {DirectorySyncComponent} from './portofolio/directory-sync/directory-sync
 import {OneDirectorySyncComponent} from './portofolio/one-directory-sync/one-directory-sync.component';
 import {NotificationServiceComponent} from './portofolio/notification-service/notification-service.component';
 import {InsuranceProcessesComponent} from './portofolio/insurance-processes/insurance-processes.component';
-import {BrokerCloudComponent} from './portofolio/broker-cloud/broker-cloud.component';
+import { BrokerCloudComponent } from './portofolio/broker-cloud/broker-cloud.component';
 import {NavigationEnd, Router} from "@angular/router";
 
 @NgModule({
@@ -53,10 +53,10 @@ import {NavigationEnd, Router} from "@angular/router";
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private router: Router) {
+  constructor(private router: Router){
     this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        window.scrollTo(0, 0);
+      if (event instanceof NavigationEnd){
+        window.scrollTo(0,0);
       }
     });
   }
