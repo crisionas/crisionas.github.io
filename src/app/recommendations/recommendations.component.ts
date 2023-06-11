@@ -21,22 +21,6 @@ export class RecommendationsComponent {
       ],
       image: 'https://media.licdn.com/dms/image/C5103AQG36bTG4lJSwQ/profile-displayphoto-shrink_800_800/0/1516985556898?e=1691625600&v=beta&t=blTmh5-O0QBxILU0ooJEbk3kvnbK0JQbUIS0mzxIvOA',
       role: 'Engineering Manager'
-    },
-    {
-      descriptionParagraphs: [
-        'Test'
-      ], designation: 'Test2',
-      name: 'Dave Wood',
-      image: 'assets/images/profile-image.jpg',
-      role: 'Graphic Designer'
-    },
-    {
-      descriptionParagraphs: [
-        'Test'
-      ], designation: 'Test2',
-      name: 'Dave Wood',
-      image: 'assets/images/profile-image.jpg',
-      role: 'Graphic Designer'
-    },
+    }
   ];
 }
