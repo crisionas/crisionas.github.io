@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {faFacebookF, faLinkedinIn, faInstagram, faGithub} from '@fortawesome/free-brands-svg-icons';
+import {faFacebookF, faLinkedinIn, faInstagram} from '@fortawesome/free-brands-svg-icons';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {MixpanelService} from "../shared/services/mixpanel/mixpanel.service";
 
@@ -12,7 +12,6 @@ export class AboutmeComponent implements OnInit {
   faInstagram = faInstagram;
   faLinkedin = faLinkedinIn;
   faFacebook = faFacebookF;
-  faGithub = faGithub;
   faEnvelope = faEnvelope;
 
   constructor(private mixpanelService: MixpanelService) {

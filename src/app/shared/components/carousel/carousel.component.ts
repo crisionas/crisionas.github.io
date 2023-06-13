@@ -19,8 +19,8 @@ export class CarouselComponent {
   @Input() carouselItems: CarouselItem[] = [];
   @Input() dataInterval: number = 0;
   @Input() description?: string;
-  @Input() height: number = 760;
-  @Input() width: number = 415;
+  @Input() height: number = 1060;
+  @Input() width: number = 715;
 }
 
 export interface CarouselItem {
