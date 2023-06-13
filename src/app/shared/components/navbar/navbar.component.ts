@@ -1,5 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {faFacebookF, faLinkedinIn, faInstagram, faGithub} from '@fortawesome/free-brands-svg-icons';
+import {faFacebookF, faLinkedinIn, faInstagram,} from '@fortawesome/free-brands-svg-icons';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {NavigationEnd, Router} from "@angular/router";
 
@@ -10,11 +10,9 @@ import {NavigationEnd, Router} from "@angular/router";
 })
 export class NavbarComponent implements OnInit {
 
-  isPortofolioEnabled = true;
   faInstagram = faInstagram;
   faLinkedin = faLinkedinIn;
   faFacebook = faFacebookF;
-  faGithub = faGithub;
   faEnvelope = faEnvelope;
 
   constructor(private router: Router) {
