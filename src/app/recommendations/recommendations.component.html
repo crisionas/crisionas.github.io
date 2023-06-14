@@ -11,7 +11,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="profile">
-                <a href="https://www.linkedin.com/in/hjarenas">
+                <a [href]="item.linkedInUrl">
                 <div class="img-area">
                   <img [src]="item.image" alt="">
                 </div>
@@ -27,7 +27,7 @@
                 <p><span *ngIf="i == 0"><i class="fa fa-quote-left"></i></span>{{ paragraph }}</p>
               </div>
               <p class="socials">
-                <a href="https://www.linkedin.com/in/hjarenas">
+                <a [href]="item.linkedInUrl">
                   <fa-icon [icon]="faLinkedin"></fa-icon>
                 </a>
               </p>
